@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 
-public class SerializeInterfaceAttribute : PropertyAttribute
+namespace Attribute
 {
-    public SerializeInterfaceAttribute(Type type)
+    public class SerializeInterfaceAttribute : PropertyAttribute
     {
-        Type = type;
-    }
+        public SerializeInterfaceAttribute(Type type)
+        {
+            Type = type;
+        }
 
-    public Type Type { get; }
+        public Type Type { get; }
+    }
 }

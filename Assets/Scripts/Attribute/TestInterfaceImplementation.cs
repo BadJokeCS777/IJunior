@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-public class TestInterfaceImplementation : MonoBehaviour, ITestInterface
+namespace Attribute
 {
-    public void Do()
+    public class TestInterfaceImplementation : MonoBehaviour, ITestInterface
     {
-        Debug.Log("Interface is work");
+        public void Do()
+        {
+            Debug.Log("Interface is work");
+        }
     }
 }

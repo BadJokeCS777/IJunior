@@ -1,4 +1,7 @@
-﻿public interface ITestInterface
+﻿namespace Attribute
 {
-    void Do();
+    public interface ITestInterface
+    {
+        void Do();
+    }
 }
