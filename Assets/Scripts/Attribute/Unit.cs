@@ -4,12 +4,12 @@ namespace Attribute
 {
     public class Unit : MonoBehaviour
     {
-        [SerializeField, SerializeInterface(typeof(IMove))] private GameObject _moveObject;
-        [SerializeField, SerializeInterface(typeof(IMove))] private GameObject[] _moveObjects;
+        [SerializeField, SerializeInterface(typeof(IMovement))] private GameObject _moveObject;
+        [SerializeField, SerializeInterface(typeof(IMovement))] private GameObject[] _moveObjects;
 
         private void Start()
         {
-            _moveObject.GetComponent<IMove>().Move();
+            _moveObject.GetComponent<IMovement>().Move();
         }
     }
 }

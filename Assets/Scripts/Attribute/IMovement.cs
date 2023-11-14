@@ -1,6 +1,6 @@
 ﻿namespace Attribute
 {
-    public interface IMove
+    public interface IMovement
     {
         void Move();
     }

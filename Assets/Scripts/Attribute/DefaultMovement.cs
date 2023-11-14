@@ -2,7 +2,7 @@
 
 namespace Attribute
 {
-    public class DefaultMove : MonoBehaviour, IMove
+    public class DefaultMovement : MonoBehaviour, IMovement
     {
         public void Move()
         {
