@@ -2,9 +2,9 @@
 
 namespace Attribute
 {
-    public class TestInterfaceImplementation : MonoBehaviour, ITestInterface
+    public class DefaultMove : MonoBehaviour, IMove
     {
-        public void Do()
+        public void Move()
         {
             Debug.Log("Interface is work");
         }
