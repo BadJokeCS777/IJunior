@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class Player : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
         _playerInput.Player.Pick.performed += ctx => _objectPicker.PickUp();
         _playerInput.Player.Drop.performed += ctx => _objectPicker.Drop();
         _playerInput.Player.Throw.performed += ctx => _objectPicker.Throw();
+        _playerInput.Player.Click.performed += OnClick;
     }
 
     private void OnEnable()
@@ -74,5 +76,16 @@ public class Player : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         _moveDirection = context.action.ReadValue<Vector2>();
+    }
+
+    private void OnClick(InputAction.CallbackContext context)
+    {
+        if (context.interaction is MultiTapInteraction)
+            StartHeavyAttack();
+    }
+
+    private void StartHeavyAttack()
+    {
+        Debug.Log("Heavy Attack");
     }
 }
