@@ -3,12 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="29a93f9c-15fb-46de-a7b2-7bc77976b877" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IJunior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IJunior/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Schema/Player Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Schema/Player Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Schema/Player Input.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Schema/Player Input.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectPicker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectPicker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickingObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickingObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,7 +79,7 @@
       <updated>1699791342462</updated>
       <workItem from="1699791346243" duration="30162000" />
       <workItem from="1700264817836" duration="3865000" />
-      <workItem from="1700483614839" duration="23445000" />
+      <workItem from="1700483614839" duration="27722000" />
     </task>
     <servers />
   </component>

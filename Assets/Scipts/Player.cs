@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         _playerInput.Player.Drop.performed += ctx => _objectPicker.Drop();
         _playerInput.Player.Throw.performed += ctx => _objectPicker.Throw();
         _playerInput.Player.Click.performed += OnClick;
+        _playerInput.Player.Paddle.performed += OnPaddle;
     }
 
     private void OnEnable()
@@ -76,6 +77,11 @@ public class Player : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         _moveDirection = context.action.ReadValue<Vector2>();
+    }
+
+    private void OnPaddle(InputAction.CallbackContext context)
+    {
+        Debug.Log("Paddle");
     }
 
     private void OnClick(InputAction.CallbackContext context)

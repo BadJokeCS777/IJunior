@@ -65,8 +65,17 @@
                     "id": "fab8484b-ce6d-42fd-8758-c0fe00788125",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Paddle",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Paddle",
+                    "type": "Value",
+                    "id": "85e5f139-fd78-4981-9338-635f2b3b5096",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -223,6 +232,39 @@
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "cae5c771-01ab-488e-8b32-7121bde499d3",
+                    "path": "1DAxis",
+                    "interactions": "Paddle",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paddle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ab86040b-6b94-4ce2-9834-e85b711cd0ae",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Paddle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d2001f15-31b0-4242-8c20-06a5267d5173",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paddle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

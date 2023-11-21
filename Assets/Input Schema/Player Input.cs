@@ -87,8 +87,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""id"": ""fab8484b-ce6d-42fd-8758-c0fe00788125"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Paddle"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Paddle"",
+                    ""type"": ""Value"",
+                    ""id"": ""85e5f139-fd78-4981-9338-635f2b3b5096"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -245,6 +254,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""cae5c771-01ab-488e-8b32-7121bde499d3"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": ""Paddle"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paddle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ab86040b-6b94-4ce2-9834-e85b711cd0ae"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Paddle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""d2001f15-31b0-4242-8c20-06a5267d5173"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paddle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -288,6 +330,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
         m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
+        m_Player_Paddle = m_Player.FindAction("Paddle", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -356,6 +399,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_Throw;
     private readonly InputAction m_Player_Click;
+    private readonly InputAction m_Player_Paddle;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -367,6 +411,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputAction @Click => m_Wrapper.m_Player_Click;
+        public InputAction @Paddle => m_Wrapper.m_Player_Paddle;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -397,6 +442,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Click.started += instance.OnClick;
             @Click.performed += instance.OnClick;
             @Click.canceled += instance.OnClick;
+            @Paddle.started += instance.OnPaddle;
+            @Paddle.performed += instance.OnPaddle;
+            @Paddle.canceled += instance.OnPaddle;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -422,6 +470,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Click.started -= instance.OnClick;
             @Click.performed -= instance.OnClick;
             @Click.canceled -= instance.OnClick;
+            @Paddle.started -= instance.OnPaddle;
+            @Paddle.performed -= instance.OnPaddle;
+            @Paddle.canceled -= instance.OnPaddle;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -466,5 +517,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnDrop(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
+        void OnPaddle(InputAction.CallbackContext context);
     }
 }
