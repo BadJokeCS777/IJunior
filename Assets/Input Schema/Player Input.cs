@@ -96,7 +96,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""id"": ""85e5f139-fd78-4981-9338-635f2b3b5096"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Paddle"",
                     ""initialStateCheck"": true
                 }
             ],
@@ -259,7 +259,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": ""1D Axis"",
                     ""id"": ""cae5c771-01ab-488e-8b32-7121bde499d3"",
                     ""path"": ""1DAxis"",
-                    ""interactions"": ""Paddle"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Paddle"",
