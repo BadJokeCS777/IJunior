@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Color _color;
+    [SerializeField] private float _duration;
     
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.DOColor(Color.red, 2).SetLoops(-1, LoopType.Yoyo);
-        _spriteRenderer.DOFade(0, 0.5f).SetLoops(-1, LoopType.Yoyo);
+        _spriteRenderer.DOColor(_color, _duration);
+        _spriteRenderer.DOFade(0f, _duration);
     }
 }

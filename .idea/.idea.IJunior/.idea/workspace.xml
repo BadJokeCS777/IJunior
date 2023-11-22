@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29a93f9c-15fb-46de-a7b2-7bc77976b877" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeSliderValue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeSliderValue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeText.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Follow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Follow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MoveTo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MoveTo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Path.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Path.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForcePusher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForcePusher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IJunior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IJunior/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveTo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveTo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +20,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcc0bbf6bf4e430c91d4aa05736fc5c62ac00/c9/82172fb6/LoopType.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
