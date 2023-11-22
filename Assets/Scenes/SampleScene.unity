@@ -317,7 +317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a9167c01ee34da6801e75460d13ba6d, type: 3}
   m_Name: 
@@ -358,10 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1278241701}
-  _color: {r: 1, g: 0, b: 0, a: 0}
+  _color: {r: 1, g: 0, b: 0, a: 1}
   _duration: 2
-  _repeats: -1
-  _loopType: 1
 --- !u!212 &1278241701
 SpriteRenderer:
   m_ObjectHideFlags: 0
