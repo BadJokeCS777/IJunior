@@ -18,16 +18,16 @@ public class SplineFollower : MonoBehaviour
 
     private void Update()
     {
-        if (_splineRate >= _spline.nodes.Count)
+        if (_splineRate >= _spline.nodes.Count - 1)
             return;
             
         _input += (Input.mousePosition.x - _lastMousePosition) * _sensitivity;
         _lastMousePosition = Input.mousePosition.x;
         _input = Mathf.Clamp(_input, -1, 1);
         
-        _splineRate += Time.deltaTime * _speed;
-        
         Place();
+        
+        _splineRate += Time.deltaTime * _speed;
     }
 
     private void Place()
