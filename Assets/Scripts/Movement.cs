@@ -4,7 +4,10 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _stepDistance;
     [SerializeField] private FootStepsSounds _stepsSounds;
+
+    private float _coveredDistance = 0f;
 
     private void Update()
     {
@@ -23,17 +26,22 @@ public class Movement : MonoBehaviour
     {
         float direction = Input.GetAxis("Vertical");
 
-        if (direction != 0f)
-        {
-            transform.Translate(_moveSpeed * direction * Time.deltaTime * Vector3.forward);
 
-            if (_stepsSounds.IsPlaying == false)
-                _stepsSounds.Play();
-        }
-        else
+        if (direction == 0f)
         {
-            if (_stepsSounds.IsPlaying)
-                _stepsSounds.Pause();
+            _coveredDistance = 0f;
+            return;
+        }
+
+        float distance = _moveSpeed * direction * Time.deltaTime;
+        _coveredDistance += Mathf.Abs(distance);
+
+        transform.Translate(distance * Vector3.forward);
+
+        if (_coveredDistance >= _stepDistance)
+        {
+            _coveredDistance -= _stepDistance;
+            _stepsSounds.Play();
         }
     }
 }

@@ -9,8 +9,6 @@ public class FootStepsSounds : MonoBehaviour
 
     private SurfaceType _currentSurface;
 
-    public bool IsPlaying => _audioSource.isPlaying;
-
     private void FixedUpdate()
     {
         if (Physics.Raycast(_checkPoint.position, Vector3.down, out RaycastHit hitInfo) == false)
@@ -23,19 +21,11 @@ public class FootStepsSounds : MonoBehaviour
             return;
 
         SetSurfaceSteps(surface.Type);
-
-        if (IsPlaying)
-            _audioSource.Play();
     }
 
     public void Play()
     {
         _audioSource.Play();
-    }
-
-    public void Pause()
-    {
-        _audioSource.Pause();
     }
 
     private void SetSurfaceSteps(SurfaceType type)
