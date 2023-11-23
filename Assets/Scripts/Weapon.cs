@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            Shoot();
         }
     }
 
