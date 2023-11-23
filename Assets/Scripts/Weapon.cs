@@ -2,7 +2,7 @@
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private ShootSound _shootSound;
+    [SerializeField] private AudioSource _audioSource;
 
     private void Update()
     {
@@ -16,6 +16,6 @@ public class Weapon : MonoBehaviour
     {
         Debug.Log("Shoot");
 
-        _shootSound.Play();
+        _audioSource.Play();
     }
 }

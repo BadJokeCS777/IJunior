@@ -1,5 +1,5 @@
 ﻿public enum SurfaceType
 {
-    Ground,
+    Grass,
     Snow
 }

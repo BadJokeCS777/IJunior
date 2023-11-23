@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [Serializable]
-public struct FootStepsSound
+public struct SurfaceStepsSound
 {
     [SerializeField] private SurfaceType _type;
     [SerializeField] private AudioClip _clip;

@@ -4,18 +4,12 @@ using UnityEngine;
 public class FootStepsSounds : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private FootStepsSound[] _stepsSounds;
+    [SerializeField] private SurfaceStepsSound[] _stepsSounds;
     [SerializeField] private Transform _checkPoint;
 
-    private SurfaceType _lastSurface;
+    private SurfaceType _currentSurface;
 
-    public bool Enabled { get; private set; }
-
-    private void Start()
-    {
-        UpdateSurface(SurfaceType.Ground);
-        Disable();
-    }
+    public bool IsPlaying => _audioSource.isPlaying;
 
     private void FixedUpdate()
     {
@@ -25,30 +19,28 @@ public class FootStepsSounds : MonoBehaviour
         if (hitInfo.transform.TryGetComponent(out Surface surface) == false)
             return;
 
-        if (surface.Type == _lastSurface)
+        if (surface.Type == _currentSurface)
             return;
 
-        UpdateSurface(surface.Type);
+        SetSurfaceSteps(surface.Type);
 
-        if (Enabled)
+        if (IsPlaying)
             _audioSource.Play();
     }
 
-    public void Enable()
+    public void Play()
     {
-        Enabled = true;
         _audioSource.Play();
     }
 
-    public void Disable()
+    public void Pause()
     {
-        Enabled = false;
         _audioSource.Pause();
     }
 
-    private void UpdateSurface(SurfaceType type)
+    private void SetSurfaceSteps(SurfaceType type)
     {
-        _lastSurface = type;
-        _audioSource.clip = _stepsSounds.First(sound => sound.Type == _lastSurface).Clip;
+        _currentSurface = type;
+        _audioSource.clip = _stepsSounds.First(sound => sound.Type == _currentSurface).Clip;
     }
 }

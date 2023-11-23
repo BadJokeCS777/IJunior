@@ -7,9 +7,9 @@ public class AmbientSoundZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Player>() == false)
+        if (other.GetComponent<AmbientListener>() == false)
             return;
 
-        _ambientSound.SetClip(_clip);
+        _ambientSound.SetAmbient(_clip);
     }
 }
