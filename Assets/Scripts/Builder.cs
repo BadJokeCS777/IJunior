@@ -16,6 +16,9 @@ public class Builder : MonoBehaviour
         if (_hitInfo.transform == null)
             return;
 
+        if (_hitInfo.transform.GetComponent<Block>() == null)
+            return;
+
         if (Input.GetMouseButtonDown(0))
             Build();
     }
